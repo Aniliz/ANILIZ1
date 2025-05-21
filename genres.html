@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aniliz - Genres</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f111a;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    header {
+      background: #141927;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #22273a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ff3c78;
+      letter-spacing: 2px;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #ff3c78;
+    }
+    main {
+      padding: 2rem 2rem 4rem;
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: #ff3c78;
+    }
+    .genres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+    .genre-card {
+      background: #1c2032;
+      border-radius: 10px;
+      color: #eee;
+      padding: 1.5rem 1rem;
+      width: 140px;
+      text-align: center;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 60, 120, 0.3);
+      cursor: pointer;
+      user-select: none;
+      transition: box-shadow 0.3s ease, transform 0.3s;
+    }
+    .genre-card:hover {
+      box-shadow: 0 8px 24px #ff3c78;
+      transform: translateY(-6px);
+    }
+    footer {
+      background: #141927;
+      text-align: center;
+      padding: 1rem 0;
+      color: #777;
+      font-size: 0.85rem;
+      border-top: 1px solid #22273a;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Aniliz</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="anime-list.html">Anime List</a>
+      <a href="genres.html" class="active">Genres</a>
+      <a href="top-rated.html">Top Rated</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Anime Genres</h1>
+    <section class="genres-grid" aria-label="Anime Genres">
+      <div class="genre-card" tabindex="0">Action</div>
+      <div class="genre-card" tabindex="0">Adventure</div>
+      <div class="genre-card" tabindex="0">Comedy</div>
+      <div class="genre-card" tabindex="0">Drama</div>
+      <div class="genre-card" tabindex="0">Fantasy</div>
+      <div class="genre-card" tabindex="0">Horror</div>
+      <div class="genre-card" tabindex="0">Mecha</div>
+      <div class="genre-card" tabindex="0">Romance</div>
+      <div class="genre-card" tabindex="0">Sci-Fi</div>
+      <div class="genre-card" tabindex="0">Slice of Life</div>
+      <div class="genre-card" tabindex="0">Supernatural</div>
+      <div class="genre-card" tabindex="0">Thriller</div>
+    </section>
+  </main>
+  <footer>
+    © 2024 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
+  </footer>
+</body>
+</html>
