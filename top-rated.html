@@ -1,0 +1,136 @@
+!DOCTYPE html>
+html lang="en">
+head>
+  meta charset="UTF-8" />
+  meta name="viewport" content="width=device-width, initial-scale=1" />
+  title>Aniliz - Top Rated Anime/title>
+  style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f111a;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    header {
+      background: #141927;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #22273a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ff3c78;
+      letter-spacing: 2px;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #ff3c78;
+    }
+    main {
+      padding: 2rem 2rem 4rem;
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: #ff3c78;
+    }
+    .top-rated-list {
+      max-width: 600px;
+      margin: 0 auto;
+      list-style: none;
+      padding-left: 0;
+    }
+    .top-rated-list li {
+      background: #1c2032;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(255, 60, 120, 0.3);
+      user-select: none;
+      cursor: default;
+      transition: box-shadow 0.3s ease;
+    }
+    .top-rated-list li:hover {
+      box-shadow: 0 8px 24px #ff3c78;
+      transform: translateY(-4px);
+    }
+    footer {
+      background: #141927;
+      text-align: center;
+      padding: 1rem 0;
+      color: #777;
+      font-size: 0.85rem;
+      border-top: 1px solid #22273a;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+      .top-rated-list {
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+    }
+  /style>
+/head>
+body>
+  header>
+    div class="logo">Aniliz/div>
+    nav>
+      a href="index.html">Home/a>
+      a href="anime-list.html">Anime List/a>
+      a href="genres.html">Genres/a>
+      a href="top-rated.html" class="active">Top Rated/a>
+      a href="contact.html">Contact/a>
+    /nav>
+  /header>
+  main>
+    h1>Top Rated Anime/h1>
+    ul class="top-rated-list" aria-label="Top Rated Anime List">
+      li>Fullmetal Alchemist: Brotherhood/li>
+      li>Attack on Titan/li>
+      li>Steins;Gate/li>
+      li>Demon Slayer/li>
+      li>Death Note/li>
+      li>My Hero Academia/li>
+      li>One Piece/li>
+      li>Jujutsu Kaisen/li>
+      li>Naruto Shippuden/li>
+      li>Code Geass/li>
+    /ul>
+  /main>
+  footer>
+    © 2024 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
+  /footer>
+/body>
+/html>
