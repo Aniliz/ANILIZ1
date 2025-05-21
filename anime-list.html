@@ -6,11 +6,13 @@
   <title>Aniliz - Anime List</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #0f111a;
@@ -20,6 +22,7 @@
       flex-direction: column;
       justify-content: space-between;
     }
+
     header {
       background: #141927;
       padding: 1rem 2rem;
@@ -31,6 +34,7 @@
       top: 0;
       z-index: 100;
     }
+
     .logo {
       font-weight: 600;
       font-size: 1.5rem;
@@ -39,6 +43,7 @@
       cursor: default;
       user-select: none;
     }
+
     nav a {
       color: #ccc;
       margin-left: 1.5rem;
@@ -46,47 +51,60 @@
       text-decoration: none;
       transition: color 0.3s;
     }
-    nav a:hover, nav a.active {
+
+    nav a:hover,
+    nav a.active {
       color: #ff3c78;
     }
+
     main {
       padding: 2rem 2rem 4rem;
       flex-grow: 1;
       max-width: 1200px;
       margin: 0 auto;
     }
+
     h1 {
       margin-bottom: 1.5rem;
       font-weight: 600;
       text-align: center;
       color: #ff3c78;
     }
+
     .anime-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
     }
+
     .anime-card {
       background: #1c2032;
       border-radius: 10px;
       overflow: hidden;
       cursor: pointer;
-      transition: box-shadow 0.3s ease;
-      box-shadow: 0 2px 8px rgba(30,30,50,0.6);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(30, 30, 50, 0.6);
       display: flex;
       flex-direction: column;
       user-select: none;
+      color: #eee;
+      text-decoration: none;
     }
+
     .anime-card:hover {
       box-shadow: 0 8px 20px #ff3c78;
       transform: translateY(-6px);
     }
+
     .anime-card img {
       width: 100%;
-      height: 250px;
+      height: 320px;
       object-fit: cover;
       flex-shrink: 0;
+      border-bottom: 1px solid #22273a;
+      image-rendering: auto;
     }
+
     .anime-card-title {
       padding: 0.75rem 1rem;
       font-weight: 600;
@@ -97,6 +115,7 @@
       justify-content: center;
       text-align: center;
     }
+
     footer {
       background: #141927;
       text-align: center;
@@ -106,6 +125,7 @@
       border-top: 1px solid #22273a;
       user-select: none;
     }
+
     @media (max-width: 600px) {
       nav a {
         margin-left: 1rem;
@@ -127,47 +147,100 @@
   </header>
   <main>
     <h1>Anime List</h1>
-    <section class="anime-list" aria-label="All Anime List">
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/one-piece.jpg" alt="One Piece Anime" />
+    <section class="anime-list" aria-label="Anime List">
+      <!-- Repeatable Anime Cards -->
+      <a class="anime-card" href="https://www.crunchyroll.com/one-piece" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/6/73245.jpg" alt="One Piece" />
         <div class="anime-card-title">One Piece</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/demon-slayer.jpg" alt="Demon Slayer Anime" />
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/demon-slayer-kinro-kamado" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/1286/99889.jpg" alt="Demon Slayer" />
         <div class="anime-card-title">Demon Slayer</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/attack-on-titan.jpg" alt="Attack on Titan Anime" />
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/attack-on-titan/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/10/47347.jpg" alt="Attack on Titan" />
         <div class="anime-card-title">Attack on Titan</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/naruto.jpg" alt="Naruto Anime" />
+      </a>
+      <a class="anime-card" href="https://www.viz.com/naruto" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/5/17407.jpg" alt="Naruto" />
         <div class="anime-card-title">Naruto</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen Anime" />
-        <div class="anime-card-title">Jujutsu Kaisen</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/my-hero-academia.jpg" alt="My Hero Academia Anime" />
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/my-hero-academia" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/10/78745.jpg" alt="My Hero Academia" />
         <div class="anime-card-title">My Hero Academia</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/dragon-ball.jpg" alt="Dragon Ball Z Anime" />
-        <div class="anime-card-title">Dragon Ball Z</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/fullmetal-alchemist.jpg" alt="Fullmetal Alchemist Anime" />
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/fullmetal-alchemist-brotherhood" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/1223/96541.jpg" alt="Fullmetal Alchemist: Brotherhood" />
         <div class="anime-card-title">Fullmetal Alchemist: Brotherhood</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/bleach.jpg" alt="Bleach Anime" />
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/bleach/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/3/40451.jpg" alt="Bleach" />
         <div class="anime-card-title">Bleach</div>
-      </article>
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/steinsgate/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/5/73199.jpg" alt="Steins;Gate" />
+        <div class="anime-card-title">Steins;Gate</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/jujutsu-kaisen" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/1171/109222.jpg" alt="Jujutsu Kaisen" />
+        <div class="anime-card-title">Jujutsu Kaisen</div>
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/code-geass/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/4/17276.jpg" alt="Code Geass" />
+        <div class="anime-card-title">Code Geass</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/death-note" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://files.catbox.moe/n1mho2.jpg" alt="Death Note" />
+        <div class="anime-card-title">Death Note</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/black-clover" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://files.catbox.moe/965uo0.jfif" alt="Black Clover" />
+        <div class="anime-card-title">Black Clover</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/dragon-ball" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://files.catbox.moe/54dsa0.jpg" alt="Dragon Ball Z" />
+        <div class="anime-card-title">Dragon Ball Z</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/mob-psycho-100" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://files.catbox.moe/gbgnok.jpg" alt="Mob Psycho 100" />
+        <div class="anime-card-title">Mob Psycho 100</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/your-lie-in-april" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/3/67177.jpg" alt="Your Lie in April" />
+        <div class="anime-card-title">Your Lie in April</div>
+      </a>
+      <a class="anime-card" href="https://www.crunchyroll.com/clannad-after-story" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/3/42741.jpg" alt="Clannad: After Story" />
+        <div class="anime-card-title">Clannad: After Story</div>
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/hunter-x-hunter-2011/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/1337/99013.jpg" alt="Hunter x Hunter (2011)" />
+        <div class="anime-card-title">Hunter x Hunter (2011)</div>
+      </a>
+      <a class="anime-card" href="https://myanimelist.net/anime/50958/Kimetsu_no_Yaiba__Yukaku-hen" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/1508/116147.jpg" alt="Demon Slayer: Entertainment District Arc" />
+        <div class="anime-card-title">Demon Slayer: Entertainment District Arc</div>
+      </a>
+      <a class="anime-card" href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/5/87048.jpg" alt="Your Name" />
+        <div class="anime-card-title">Your Name</div>
+      </a>
+      <a class="anime-card" href="https://myanimelist.net/anime/30276/Made_in_Abyss" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/11/85145.jpg" alt="Made in Abyss" />
+        <div class="anime-card-title">Made in Abyss</div>
+      </a>
+      <a class="anime-card" href="https://www.viz.com/naruto-shippuden" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/5/17407l.jpg" alt="Naruto Shippuden" />
+        <div class="anime-card-title">Naruto Shippuden</div>
+      </a>
+      <a class="anime-card" href="https://www.funimation.com/shows/cowboy-bebop/" target="_blank" rel="noopener" tabindex="0">
+        <img src="https://cdn.myanimelist.net/images/anime/4/19644.jpg" alt="Cowboy Bebop" />
+        <div class="anime-card-title">Cowboy Bebop</div>
+      </a>
     </section>
   </main>
   <footer>
-    © 2024 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
+    © 2025 Aniliz. All rights reserved. Made with ❤️ for anime lovers by KINGXMASTER.
   </footer>
 </body>
 </html>
