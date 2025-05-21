@@ -52,78 +52,28 @@
     main {
       padding: 2rem 2rem 4rem;
       flex-grow: 1;
-      max-width: 1200px;
+      max-width: 800px;
       margin: 0 auto;
     }
-    .featured {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 3rem;
-      cursor: pointer;
-      box-shadow: 0 10px 25px rgba(255, 60, 120, 0.3);
-      transition: transform 0.3s ease;
-    }
-    .featured:hover {
-      transform: scale(1.02);
-    }
-    .featured img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      filter: brightness(0.75);
-    }
-    .featured-content {
-      position: absolute;
-      bottom: 1.5rem;
-      left: 1.5rem;
-      color: #fff;
-      max-width: 70%;
-      text-shadow: 0 0 10px #ff3c78aa;
-    }
-    .featured-content h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .featured-content p {
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-    .anime-grid {
+    .anime-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
     }
-    .anime-card {
+    .anime-item {
       background: #1c2032;
+      padding: 1rem;
       border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: box-shadow 0.3s ease;
-      box-shadow: 0 2px 8px rgba(30,30,50,0.6);
-      display: flex;
-      flex-direction: column;
-      user-select: none;
-    }
-    .anime-card:hover {
-      box-shadow: 0 8px 20px #ff3c78;
-      transform: translateY(-6px);
-    }
-    .anime-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-    .anime-card-title {
-      padding: 0.75rem 1rem;
+      text-align: center;
       font-weight: 600;
       color: #eee;
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      box-shadow: 0 2px 8px rgba(30,30,50,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .anime-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px #ff3c78;
     }
     footer {
       background: #141927;
@@ -133,21 +83,6 @@
       font-size: 0.85rem;
       border-top: 1px solid #22273a;
       user-select: none;
-    }
-    @media (max-width: 600px) {
-      .featured-content h2 {
-        font-size: 1.5rem;
-      }
-      .featured-content p {
-        font-size: 0.9rem;
-      }
-      .featured img {
-        height: 220px;
-      }
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.9rem;
-      }
     }
   </style>
 </head>
@@ -163,42 +98,18 @@
     </nav>
   </header>
   <main>
-    <section class="featured" aria-label="Featured Anime">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Featured Anime: Cyberpunk Anime" />
-      <div class="featured-content">
-        <h2>Cyberpunk: Edgerunners</h2>
-        <p>A thrilling anime series set in the futuristic city filled with neon lights, danger, and action-packed adventure.</p>
-      </div>
-    </section>
-    <section class="anime-grid" aria-label="Anime Grid">
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/one-piece.jpg" alt="One Piece Anime" />
-        <div class="anime-card-title">One Piece</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/demon-slayer.jpg" alt="Demon Slayer Anime" />
-        <div class="anime-card-title">Demon Slayer</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/attack-on-titan.jpg" alt="Attack on Titan Anime" />
-        <div class="anime-card-title">Attack on Titan</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/naruto.jpg" alt="Naruto Anime" />
-        <div class="anime-card-title">Naruto</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/jujutsu-kaisen.jpg" alt="Jujutsu Kaisen Anime" />
-        <div class="anime-card-title">Jujutsu Kaisen</div>
-      </article>
-      <article class="anime-card" tabindex="0">
-        <img src="https://cdn.anime-eden.com/anime/my-hero-academia.jpg" alt="My Hero Academia Anime" />
-        <div class="anime-card-title">My Hero Academia</div>
-      </article>
+    <h2 style="margin-bottom: 1.5rem;">Popular Anime</h2>
+    <section class="anime-list" aria-label="Anime List">
+      <div class="anime-item">One Piece</div>
+      <div class="anime-item">Demon Slayer</div>
+      <div class="anime-item">Attack on Titan</div>
+      <div class="anime-item">Naruto</div>
+      <div class="anime-item">Jujutsu Kaisen</div>
+      <div class="anime-item">My Hero Academia</div>
     </section>
   </main>
   <footer>
-    © 2024 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
+    © 2025 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
   </footer>
 </body>
 </html>
