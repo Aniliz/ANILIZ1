@@ -1,0 +1,158 @@
+!DOCTYPE html>
+html lang="en">
+head>
+  meta charset="UTF-8">
+  meta name="viewport" content="width=device-width, initial-scale=1">
+  title>Aniliz - Contact/title>
+  style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f111a;
+      color: #eee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    header {
+      background: #141927;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #22273a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ff3c78;
+      letter-spacing: 2px;
+      cursor: default;
+      user-select: none;
+    }
+    nav a {
+      color: #ccc;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #ff3c78;
+    }
+    main {
+      padding: 2rem 2rem 4rem;
+      flex-grow: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      color: #ff3c78;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      background: #1c2032;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(255, 60, 120, 0.3);
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    input, textarea {
+      background: #0f111a;
+      border: 1px solid #444a6e;
+      border-radius: 6px;
+      color: #eee;
+      padding: 0.75rem 1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #ff3c78;
+    }
+    button {
+      background-color: #ff3c78;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: center;
+      width: 130px;
+    }
+    button:hover {
+      background-color: #d73365;
+    }
+    footer {
+      background: #141927;
+      text-align: center;
+      padding: 1rem 0;
+      color: #777;
+      font-size: 0.85rem;
+      border-top: 1px solid #22273a;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+      main {
+        max-width: 100%;
+        padding: 2rem 1rem 4rem;
+      }
+    }
+  /style>
+/head>
+body>
+  header>
+    div class="logo">Aniliz/div>
+    nav>
+      a href="index.html">Home/a>
+      a href="anime-list.html">Anime List/a>
+      a href="genres.html">Genres/a>
+      a href="top-rated.html">Top Rated/a>
+      a href="contact.html" class="active">Contact/a>
+    /nav>
+  /header>
+  main>
+    h1>Contact Us/h1>
+    form aria-label="Contact Form">
+      label for="name">Name/label>
+      input type="text" id="name" name="name" placeholder="Your name" required />
+
+      label for="email">Email/label>
+      input type="email" id="email" name="email" placeholder="Your email" required />
+
+      label for="message">Message/label>
+      textarea id="message" name="message" rows="5" placeholder="Write your message here..." required>/textarea>
+
+      button type="submit">Send/button>
+    /form>
+  /main>
+  footer>
+    © 2024 Aniliz. All rights reserved. Made with ❤️ for anime lovers.
+  /footer>
+/body>
+/html>
